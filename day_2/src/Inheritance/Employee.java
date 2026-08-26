@@ -50,7 +50,28 @@ class Manager extends EmployeFields{
         System.out.println("department manage is : "+department);
     }
 }
+class Developer extends  EmployeFields{
+   String programmingLanguage;
+   int  experienceYears;
 
+    void displayInfo() {
+        super.displayInfo();
+        System.out.println("Programing language is : "+programmingLanguage);
+        System.out.println("Experience year is : "+experienceYears);
+    }
+}
+
+class BackendDeveloper extends Developer{
+   String framework;
+   String database;
+
+    @Override
+    void displayInfo() {
+        super.displayInfo();
+        System.out.println("framework is : "+framework);
+        System.out.println("database is : "+database);
+    }
+}
 
 public class Employee {
 }
