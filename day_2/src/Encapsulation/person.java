@@ -15,7 +15,13 @@ class Presons{
         return age;
     }
 
-
+    public void setAge(int age) {
+       if(age>0){
+           this.age = age;
+       }else {
+           System.out.println(age +" age must greater than 0");
+       }
+    }
 }
 public class person {
 
