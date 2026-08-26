@@ -34,6 +34,7 @@ class EmployeFields{
     }
 
     void  displayInfo(){
+        System.out.println("Id : "+getId());
         System.out.println("name : "+getName());
         System.out.println("salary : $"+getSalary());
     }
@@ -57,7 +58,7 @@ class Developer extends  EmployeFields{
     void displayInfo() {
         super.displayInfo();
         System.out.println("Programing language is : "+programmingLanguage);
-        System.out.println("Experience year is : "+experienceYears);
+        System.out.println("Experience year is : "+experienceYears +" years");
     }
 }
 
@@ -74,5 +75,24 @@ class BackendDeveloper extends Developer{
 }
 
 public class Employee {
+    public static void main(String[] args) {
+        BackendDeveloper d1= new BackendDeveloper();
+        d1.setName("maxamed");
+        d1.setId(1);
+        d1.setSalary(899);
+        d1.programmingLanguage="java";
+        d1.experienceYears=3;
+        d1.framework="spring boot";
+        d1.database="sql";
+        d1.displayInfo();
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++");
+        Manager m1 = new Manager();
+        m1.setName("farax");
+        m1.setId(1);
+        m1.setSalary(900);
+        m1.teamSize=8;
+        m1.department="HQ";
+        m1.displayInfo();
+    }
 }
 
