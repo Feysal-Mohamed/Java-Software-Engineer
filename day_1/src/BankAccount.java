@@ -9,6 +9,19 @@ class  Bank{
         System.out.println("owner : "+OwnerName);
         System.out.println("Balance is  : $"+Balance);
     }
+    void  Deposite(double Amount){
+        Balance += Amount;
+        System.out.println(OwnerName+" make deposit $"+Amount);
+        System.out.println("now your balnace is : $"+Balance);
+
+    }
+
+    void  WithDraw(double Amount){
+        Balance -= Amount;
+        System.out.println(OwnerName+" Withdrawls $"+Amount);
+        System.out.println("now your balnace is : $"+Balance);
+
+    }
 
 }
 
